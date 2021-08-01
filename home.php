@@ -5,13 +5,13 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
 
-            <h1 class="mb-5" data-scrollax="properties: { translateY: '20%', opacity: 1.0 }"><br><span>Solving un employment by Creating a global village for communication between job seekrs and employers.</span></h1>
+            <h1 class="mb-5" data-scrollax="properties: { translateY: '20%', opacity: 1.0 }"><br><span>Solving unemployment by Creating a global village for communication between job seekrs and employers.</span></h1>
 
             <div class="ftco-search">
               <div class="row">
                 <div class="col-md-12 nav-link-wrap">
                   <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">search a Job</a>  
+                    <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">search Job</a>  
                   </div>
                 </div>
                 <div class="col-md-12 tab-wrap">
@@ -26,7 +26,7 @@
                             <div class="form-group">
                               <div class="form-field">
                                 <div class="icon"><span class="icon-briefcase"></span></div>
-                                <input type="text"  name="SEARCH" class="form-control" placeholder="eg.Web Developer.Graphics Designer">
+                                <input type="text"  name="SEARCH" class="form-control" placeholder="eg maid,Security-guard">
                               </div>
                             </div>
                           </div>

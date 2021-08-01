@@ -5,22 +5,23 @@
               <div class="modal-content">
                 <div class="modal-header">
 
-                        <h4 style="text-align:center;">Job Seeker Login</h4>
+                      
                   
 
 				   
-                  <button class="close" data-dismiss="modal" type=
+                        <button class="close" data-dismiss="modal" type=
                   "button">×</button>
  
                 </div>
 
                 <!-- <form action="process.php?action=login" enctype="multipart/form-data" method="post"> -->
                   <div class="modal-body hold-transition login-page">
-                    <div id="loginerrormessage"></div>
+                    <div id="loginerrormessage" style="background: green; color: white;"></div>
                     <div class="login-box"> 
-                        <div class="login-box-body" style="border: solid 1px #ddd;padding: 35px;min-height: 350px;"> 
+                        <div class="login-box-body" style="border: solid 2px #ddd;padding: 35px;min-height: 350px;"> 
 
                           <form action="" method="post">
+						  <center><H4> Applicant Login</H4></center>
 						   <center><img class="logo"style="width:40%; height:40%; "src="./plugins/jobportal/images/recruite.jpg" alt="logo"></center>
 						  
                             <div class="form-group has-feedback">

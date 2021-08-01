@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2021 at 02:51 PM
+-- Generation Time: Aug 01, 2021 at 12:37 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -51,11 +51,7 @@ CREATE TABLE `tblapplicants` (
 --
 
 INSERT INTO `tblapplicants` (`APPLICANTID`, `FNAME`, `LNAME`, `MNAME`, `ADDRESS`, `SEX`, `CIVILSTATUS`, `BIRTHDATE`, `BIRTHPLACE`, `AGE`, `USERNAME`, `PASS`, `EMAILADDRESS`, `CONTACTNO`, `DEGREE`, `APPLICANTPHOTO`, `APPLIEDAT`) VALUES
-(2021027, 'Kayabula', 'Mark', 'Vianne', 'Masaka', 'Male', 'Married', '1994-01-30', 'Masaka', 27, 'mark', 'f1b5a91d4d6ad523f2610114591c007e75d15084', 'kayondo@gmail.com', '078906789', 'Diploma', 'photos/broiler.jpg', '2021-06-25 10:23:04.661462'),
-(2021028, 'Kintu', 'Rashad', '', 'Masaka', 'Male', 'Married', '1990-08-17', 'Masaka', 30, 'john', 'a51dda7c7ff50b61eaea0444371f4a6a9301e501', 'kayondolln@gmail.com', '07678787', 'Degree', '', '2021-06-25 11:16:42.167102'),
-(2021029, 'Nduga', 'Vianne', '', 'Kijjabwemi', 'Female', 'none', '1990-07-19', 'masaka', 30, 'vianne', '5a478022f33905d2d40410e006fb1aa8564b280c', 'vianne@gmail.com', '0758963585', 'degree', 'photos/white bg.PNG', '2021-06-25 15:30:37.370973'),
-(2021030, 'nsamba', 'rodgers', '', 'kijjabwemi', 'Male', 'Single', '1994-05-18', 'masaka', 27, 'kato', '5a478022f33905d2d40410e006fb1aa8564b280c', 'nsamba@gmail.com', '072147874', 'Diploma Enrolled Nursing', '', '2021-06-26 02:50:02.845908'),
-(2021031, 'Nsamba', 'Rodgers', '', 'kijjabwemi', 'Female', 'none', '1994-05-23', 'masaka', 27, 'nsamba', '5a478022f33905d2d40410e006fb1aa8564b280c', 'nsamba@gmail.com', '072147874', 'Nursing and Midwifely', '', '2021-06-26 02:56:31.985779');
+(2021032, 'Matovu', 'Benedict', '', 'Masaka-Uganda', 'Male', 'Single', '1994-10-10', 'Kijjabwemi', 26, 'bmk', 'fd93ac461456a118d38a8d6b4d18f6741682f3eb', 'matovubenedict@gmail.com', '0757285746', 'A-Level Certificate', 'photos/b&daphine.jpg', '2021-08-01 10:10:28.551863');
 
 -- --------------------------------------------------------
 
@@ -88,6 +84,8 @@ INSERT INTO `tblattachmentfile` (`FILEID`, `JOBID`, `FILE_NAME`, `FILE_LOCATION`
 (2021000010, 9, 'Resume', 'photos/25062021021128silaje application.docx', 2021029),
 (2021000011, 10, 'Resume', 'photos/26062021043731siraje CV.docx', 2021030),
 (2021000012, 10, 'Resume', 'photos/26062021044421silaje application.docx', 2021031),
+(2021000013, 10, 'Resume', 'photos/30072021081557CURRICULUM VITAE ANGELLA.docx', 2021030),
+(2021000014, 13, 'Resume', 'photos/01082021120836CURRICULUM VITAE.docx', 2021032),
 (2147483647, 2, 'Resume', 'photos/24122019072801Filtering a Group of Data VB.Net and SQL Server 2019.docx', 2019019);
 
 -- --------------------------------------------------------
@@ -109,10 +107,10 @@ CREATE TABLE `tblautonumbers` (
 --
 
 INSERT INTO `tblautonumbers` (`AUTOID`, `AUTOSTART`, `AUTOEND`, `AUTOINC`, `AUTOKEY`) VALUES
-(1, '02983', 12, 1, 'userid'),
-(2, '000', 84, 1, 'employeeid'),
-(3, '0', 32, 1, 'APPLICANT'),
-(4, '0000', 13, 1, 'FILEID');
+(1, '02983', 13, 1, 'userid'),
+(2, '000', 86, 1, 'employeeid'),
+(3, '0', 33, 1, 'APPLICANT'),
+(4, '0000', 15, 1, 'FILEID');
 
 -- --------------------------------------------------------
 
@@ -130,15 +128,13 @@ CREATE TABLE `tblcategory` (
 --
 
 INSERT INTO `tblcategory` (`CATEGORYID`, `CATEGORY`) VALUES
-(29, 'Insuarance'),
-(30, 'Software & Data'),
-(31, 'Transport Services'),
-(32, 'HealthCare'),
-(33, 'Sales'),
-(34, 'Catering'),
-(35, 'Fashion and Design'),
-(37, 'Banking'),
-(38, 'IT');
+(39, 'Transportation'),
+(40, 'Security'),
+(41, 'Maids'),
+(42, 'Construction'),
+(43, 'Sales'),
+(44, 'Health-Care'),
+(45, 'Hotel-Management');
 
 -- --------------------------------------------------------
 
@@ -158,12 +154,13 @@ CREATE TABLE `tblcompany` (
 --
 
 INSERT INTO `tblcompany` (`COMPANYID`, `COMPANYNAME`, `COMPANYADDRESS`, `COMPANYCONTACTNO`) VALUES
-(11, 'Insurance Company of East Africa (U) Ltd ', 'Muto complex,  2 floor room 25,elgin street masaka town', '0757285746'),
-(12, 'Automan international Uganda Limited', 'Masaka Edward Avenue', '0786279856'),
-(13, 'Bulamu Medical Clinic', 'located on Edward Kiwanuka Building 1st floor room 9 Edward Avenue', '+256789854781'),
-(14, 'Lucky Computers ltd', 'ssese coner building Elgin Street', '0796745515'),
-(15, 'Valley cave Restaurant', 'Obert street Masaka town', '0774188515'),
-(16, 'PlatinumCredit Uganda Ltd', 'Mapeera Building Kamplala', '+312-78478888952');
+(17, 'National Housing and Construction Company Ltd', 'Kampala', '+256-701-077701'),
+(18, 'Rakai Health Sciences Program (RHSP)', 'Kyotera', '+256-701-077701'),
+(19, 'Spark Security Services', 'Abu Dhabi - United Arab Emirates', '+256-701-077701'),
+(20, 'House-Maids-UAE', 'Doha, Qatar', '+256-701-077701'),
+(21, 'Al Taef Star Transport', 'Dubai', '+256-701-077701'),
+(22, 'Murray & Roberts Contractors Middle East LLC', 'Dubai - United Arab Emirates', '+256-701-077701'),
+(23, 'MPC Healthcare', 'Healthcare City - Dubai - United Arab Emirates', '+256-701-077701');
 
 -- --------------------------------------------------------
 
@@ -198,9 +195,8 @@ CREATE TABLE `tblemployer` (
 --
 
 INSERT INTO `tblemployer` (`INCID`, `EMPLOYEEID`, `FNAME`, `LNAME`, `MNAME`, `ADDRESS`, `BIRTHDATE`, `BIRTHPLACE`, `AGE`, `SEX`, `CIVILSTATUS`, `TELNO`, `EMP_EMAILADDRESS`, `POSITION`, `EMPPHOTO`, `EMPUSERNAME`, `EMPPASSWORD`, `DATEHIRED`, `COMPANYID`) VALUES
-(77, '2018003', 'matovu', 'benedict', 'none', 'kijjabwemi', '1993-02-17', 'masaka', 28, 'Male', 'Single', '0782762749', 'matovubenedict@gmail.com', 'data manager', '', '2018003', '8caf110be31bdeaa495c5bf6f410aa422d6cc36d', '2021-06-17', 8),
-(78, '2018005', 'LULE', 'MARTIN', 'MMM', 'MASAKA', '1990-02-07', 'NCVBCV', 31, 'Male', 'Single', '786786', '7ty@gmail.com', 'RYRR', '', '2018005', '7e51307ed8053a6353bb8d65f278efc07291652f', '2021-06-04', 9),
-(79, '2018009', 'nduga', 'vian', 'njn nj', 'new cam', '1990-02-02', 'nb njnj', 31, 'Male', 'Married', ' bbbb ', '7ty@gmail.com', 'b b', '', '2018009', 'fc6dc3d46679c7d5ab09075d24b5dd72124c6973', '2021-06-02', 10);
+(80, '20210001', 'Abdul ', 'Mustafah', 'Mansoor', 'Building 71 - Building No. 71,,Dubai', '1988-03-25', 'Dubai - United Arab Emirates', 33, 'Male', 'Married', '97143834444', 'mpchealthcare@gmail.com', 'Chief Executive Officer', '', '20210001', '5ff7cd787bc59a5ec5e0aadb6d6137a0a8847fd1', '2021-08-02', 23),
+(81, '20210002', 'Dr. ', 'Joseph', 'Kagaayi', 'Muyenga-Kampala', '1969-06-11', 'Miti ebiri-Kyotera', 52, 'Male', 'Married', '0782266266', 'info@rhsp.org', 'Executive Director', '', '20210002', '0d3b104d33799be38042e9321c56179faa1c9988', '2021-08-05', 18);
 
 -- --------------------------------------------------------
 
@@ -241,10 +237,8 @@ CREATE TABLE `tbljob` (
 --
 
 INSERT INTO `tbljob` (`JOBID`, `COMPANYID`, `CATEGORY`, `OCCUPATIONTITLE`, `REQ_NO_EMPLOYEES`, `SALARIES`, `DURATION_EMPLOYEMENT`, `QUALIFICATION_WORKEXPERIENCE`, `JOBDESCRIPTION`, `PREFEREDSEX`, `DEADLINE`, `DATEPOSTED`) VALUES
-(9, 11, 'Insuarance', 'Sales representatives', 20, '350,000-400,000', 'From 8 am to 5:30 om', 'Diploma', '\r\nICEA LION LIFE ASSURANCE presents an exciting opportunity for passionate, professional, and driven sales agents who are results-driven and looking to build a successful career in sales. \r\n\r\n\r\n', 'Male/Female', '2021-07-20', '2021-06-20 00:00:00'),
-(10, 13, 'HealthCare', 'Senior Nursing Officer', 1, '500,000 ugshs', 'from 8am to 6pm', 'Diploma  Enrolled Nursing', 'RESPONSIBILITIES\r\nâ€¢ Manage the supply of drugs and medical equipment in the clinic/mobile clinics\r\n\r\nâ€¢ Ensure that the patient flow is correct\r\n\r\nâ€¢ Ensure documentation of patientâ€™s files are correctly done\r\n\r\nâ€¢ Ensure that SV patient files are well protected and brought to the office for safe custody\r\n\r\nâ€¢ Organize and coordinate team activities (weekâ€™s schedule, annual leave, absences, etc)\r\n\r\nâ€¢ Ensure that the needed materials or tools are in both clinics and check that the staff have the appropriate resources to work before leaving the office every morning', 'Male/Female', '2021-07-28', '2021-06-26 00:00:00'),
-(11, 15, 'Catering', 'Waiter and Waitress', 6, '150,000-200,000', 'from 7am to 10pm', 'A-Level certificate', 'Responsibilities include;\r\nServing food for inside customers in the restaurant.\r\nMaking  food deliveries to close customers within masaka town.', 'Male/Female', '2021-07-15', '2021-06-26 00:00:00'),
-(12, 16, 'Banking', 'IT  Manager', 1, 'Confidential', 'from 8am to 6pm', 'Bachelors of Science in Information Technology', '\r\n\r\n\r\n\r\nResponsibilities of IT Manager Would Include: \r\nâ€¢ Design, Implement and Manage network and communication systems, i.e. Phone system (for a call center) and computer network \r\n\r\nâ€¢ System evaluation/analysis and operation monitoring \r\n\r\nâ€¢ Database administration/server administration \r\n\r\nâ€¢ Configuration of unmanageable and manageable switch/ router (Cisco, Unifi, Vigor) ', 'Male', '2021-08-01', '2021-06-26 00:00:00');
+(13, 19, 'Security', 'Security Guard', 200, '1.5 Million Ug shs', 'from 8am to 5pm', 'O-level  certificate ', 'Inspect and patrol premises regularly\r\nMonitor property entrance\r\nAuthorize entrance of people and vehicles\r\nReport any suspicious behaviors and happenings\r\nSecure all exits, doors and windows\r\nMonitor surveillance cameras\r\nRespond to alarms and react in a timely manner\r\nProvide assistance to people in need\r\nSubmit reports of daily surveillance activity\r\nSubmit reports of every suspicious action\r\n', 'Male/Female', '2021-09-15', '2021-08-01 00:00:00'),
+(14, 17, 'Construction', 'Road Workers', 5000, '300,000 to 1,000,000', '7am to 6pm', 'PLE certificate', 'installing the cones, signs and barricades that warn drivers and control the flow of traffic, acting as flagmen to stop or direct traffic, clearing debris from the work site, using jackhammers to break up existing pavement and tending equipment such as cement mixers or asphalt heaters.', 'Male/Female', '2021-08-31', '2021-08-01 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -271,12 +265,7 @@ CREATE TABLE `tbljobregistration` (
 --
 
 INSERT INTO `tbljobregistration` (`REGISTRATIONID`, `COMPANYID`, `JOBID`, `APPLICANTID`, `APPLICANT`, `REGISTRATIONDATE`, `REMARKS`, `FILEID`, `PENDINGAPPLICATION`, `HVIEW`, `DATETIMEAPPROVED`) VALUES
-(9, 11, 9, 2021024, 'Kayondo Allan', '2021-06-25', 'Pending', 202100005, 1, 1, '2021-06-25 10:14:00'),
-(12, 11, 9, 2021027, 'Kayabula Mark', '2021-06-25', 'you have been selected for an interview', 202100008, 0, 0, '2021-06-25 16:30:15'),
-(13, 11, 9, 2021028, 'Kintu Rashad', '2021-06-25', 'Kindly wait for feedback', 202100009, 0, 0, '2021-06-27 11:05:27'),
-(14, 11, 9, 2021029, 'Nduga Vianne', '2021-06-25', 'Dia Ndugga vianne ,you have been selected for an interview that will take place at company offices masaka town on 22-july-2021 at 8am,please keep time', 2021000010, 0, 0, '2021-06-26 20:00:04'),
-(15, 13, 10, 2021030, 'nsamba rodgers', '2021-06-26', 'Kindly wait for feedback', 2021000011, 0, 0, '2021-06-27 11:00:55'),
-(16, 13, 10, 2021031, 'Nsamba Rodgers', '2021-06-26', 'Kindly wait for feedback', 2021000012, 0, 0, '2021-06-27 11:05:09');
+(18, 19, 13, 2021032, 'Matovu Benedict', '2021-08-01', 'You have been selected,attend interview on 7th-Aug-2021 at 8am via zoom Meeting ID:9178765432, Passcode:url2021', 2021000014, 0, 0, '2021-08-01 13:16:56');
 
 -- --------------------------------------------------------
 
@@ -298,7 +287,8 @@ CREATE TABLE `tblusers` (
 --
 
 INSERT INTO `tblusers` (`USERID`, `FULLNAME`, `USERNAME`, `PASS`, `ROLE`, `PICLOCATION`) VALUES
-('00019', 'matovu', 'benedict', '5a478022f33905d2d40410e006fb1aa8564b280c', 'Administrator', 'photos/ben black.PNG');
+('00019', 'matovu', 'benedict', '5a478022f33905d2d40410e006fb1aa8564b280c', 'Administrator', 'photos/ben black.PNG'),
+('0298312', 'Kintu  Rashad', 'Rashad', '5a478022f33905d2d40410e006fb1aa8564b280c', 'Administrator', 'photos/cvd hosp.JPG');
 
 --
 -- Indexes for dumped tables
@@ -373,7 +363,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `tblapplicants`
 --
 ALTER TABLE `tblapplicants`
-  MODIFY `APPLICANTID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2021032;
+  MODIFY `APPLICANTID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2021033;
 --
 -- AUTO_INCREMENT for table `tblattachmentfile`
 --
@@ -388,17 +378,17 @@ ALTER TABLE `tblautonumbers`
 -- AUTO_INCREMENT for table `tblcategory`
 --
 ALTER TABLE `tblcategory`
-  MODIFY `CATEGORYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `CATEGORYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 --
 -- AUTO_INCREMENT for table `tblcompany`
 --
 ALTER TABLE `tblcompany`
-  MODIFY `COMPANYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `COMPANYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `tblemployer`
 --
 ALTER TABLE `tblemployer`
-  MODIFY `INCID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `INCID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 --
 -- AUTO_INCREMENT for table `tblfeedback`
 --
@@ -408,12 +398,12 @@ ALTER TABLE `tblfeedback`
 -- AUTO_INCREMENT for table `tbljob`
 --
 ALTER TABLE `tbljob`
-  MODIFY `JOBID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `JOBID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `tbljobregistration`
 --
 ALTER TABLE `tbljobregistration`
-  MODIFY `REGISTRATIONID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `REGISTRATIONID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -14,7 +14,7 @@ require_once("../include/initialize.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>URL-OJMS| Log in</title>
+  <title>URL-OJMS| Admin-Login</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -40,12 +40,12 @@ require_once("../include/initialize.php");
   </div> -->
   <!-- /.login-logo -->
   <div class="login-box-body" style="min-height: 400px; min-width:500px;">
-    <h1 class="login-box-msg">Unique Recruiters Ltd</h1>
-    <hr/>
-	
-<center><img class="lo"style="width:40%; height:40%; "src="./admin/images/recruite.jpg" alt="logo"></center>
+    <h1 class="login-box-msg">Unique Recruiters Limited</h1>
     
-	  <hr/>
+	
+<center><img class="lo"style="width:40%; height:40%; "src="recruite.jpg" alt="logo"></center>
+    
+	  
 	<p><?php check_message(); ?></p>
 
     <form action="" method="post">
@@ -67,7 +67,7 @@ require_once("../include/initialize.php");
         </div>   -->
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat">Log in</button>
+          <center><button type="submit" name="btnLogin" class="btn  btn-primary btn-block">Log in</button></center>
         </div>
       </div>
         <!-- /.col -->
