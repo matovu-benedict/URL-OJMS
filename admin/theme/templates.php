@@ -64,7 +64,7 @@
     <!-- Logo -->
     <a href="<?php echo web_root;?>/admin/" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>URL</b></span>
+      <span class="logo-mini"><b>OJMS</b></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg" style="text-align:left;"><b>Unique Recruters Ltd</b></span>
     </a>
@@ -185,6 +185,11 @@
             <i class="fa fa-suitcase"></i> <span>Vacancy</span> 
           </a>
         </li>
+		<li class="<?php echo (currentpage() == 'candidate') ? "active" : false;?>" >
+          <a href="<?php echo web_root ;?>admin/candidate/">
+            <i class="fa fa-briefcase"></i> <span>Selected Candidates</span> 
+          </a>
+        </li>
         <li class="<?php echo (currentpage() == 'employer') ? "active" : false;?>" >
           <a href="<?php echo web_root ;?>admin/employer/">
             <i class="fa fa-users"></i> <span>Employer Profile</span> 
@@ -192,7 +197,7 @@
         </li> 
         <li class="<?php echo (currentpage() == 'applicants') ? "active" : false;?>" > 
           <a href="<?php echo web_root ;?>admin/applicants/">
-            <i class="fa fa-users"></i> <span>Applicants</span> 
+            <i class="fa fa-envelope"></i> <span>Applicants</span> 
             <span class="label label-primary pull-right">
               <?php
                 $sql = "SELECT count(*) as 'APPL' FROM `tbljobregistration` WHERE `PENDINGAPPLICATION`=1";
@@ -203,6 +208,9 @@
             </span>
           </a>
         </li> 
+			
+          
+		
         <li class="<?php echo (currentpage() == 'category') ? "active" : false;?>" > 
           <a href="<?php echo web_root ;?>admin/category/">
             <i class="fa fa-list"></i> <span>Category</span>  

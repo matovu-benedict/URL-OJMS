@@ -21,6 +21,9 @@
                       <th>Company</th>
                       <th>Location</th>
                       <th>Feedback</th>
+					  <th>Sent By</th>
+					  <th>Time</th>
+			
                     </tr>
                   </thead>
                   <tbody>
@@ -35,6 +38,9 @@
                           echo '<td class="mailbox-attachment">'.$result->COMPANYNAME.'</td>';
                           echo '<td class="mailbox-attachment">'.$result->COMPANYADDRESS.'</td>';
                           echo '<td class="mailbox-attachment">'.$result->REMARKS.'</td>'; 
+						  echo '<td class="mailbox-attachment">'.$result->SENT.'</td>';
+						   echo '<td class="mailbox-attachment">'.$result->DATETIMEAPPROVED.'</td>';
+							 
                           echo '</tr>';
                       } 
                     ?>

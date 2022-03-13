@@ -165,7 +165,7 @@ switch ($action) {
 					$emp->update($_POST['EMPLOYEEID']);
  
 
-				message("Employee has been updated!", "success");
+				message("Applicant has been updated!", "success");
 				// redirect("index.php?view=view&id=".$_POST['EMPLOYEEID']);
 		       redirect("index.php?view=edit&id=".$_POST['EMPLOYEEID']);
 	    	}
@@ -186,7 +186,7 @@ switch ($action) {
 		 	$jobreg->delete($id);
 	 
 
-		message("Employee(s) already Deleted!","success");
+		message("Applicant has been deleted!","success");
 		redirect('index.php'); 
 		
 	}
@@ -260,7 +260,8 @@ global $mydb;
 		$applicantid = $_POST['APPLICANTID'];
 
 		$remarks = $_POST['REMARKS'];
-		$sql="UPDATE `tbljobregistration` SET `REMARKS`='{$remarks}',PENDINGAPPLICATION=0,HVIEW=0,DATETIMEAPPROVED=NOW() WHERE `REGISTRATIONID`='{$id}'";
+		$sent = $_POST['SENT'];
+		$sql="UPDATE `tbljobregistration` SET `REMARKS`='{$remarks}', `SENT`='{$sent}',PENDINGAPPLICATION=0,HVIEW=0,DATETIMEAPPROVED=NOW() WHERE `REGISTRATIONID`='{$id}'";
 		$mydb->setQuery($sql);
 		$cur = $mydb->executeQuery();
 

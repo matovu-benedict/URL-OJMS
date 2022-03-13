@@ -86,7 +86,7 @@
 		
 		 <img class="logo"style="width:7%; height:5%; "src="./plugins/jobportal/images/recruite.jpg" alt="logo">
 		
-	      <a class="navbar-brand" href="<?php echo web_root; ?>">Online Jobs Management System</a>
+	      <a class="navbar-brand" href="<?php echo web_root; ?>"> OJMS-Unique Recruiters Limited</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -96,7 +96,7 @@
 	          <li class="nav-item <?php  if(!isset($_GET['q'])) {  echo 'active';}  ?>"><a href="<?php echo web_root; ?>" class="nav-link">Home</a></li> 
 	          <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>  -->
             
-            <li class="nav-item <?php  if(isset($_GET['q'])) { if($_GET['q']=='hiring'){ echo 'active'; }else{ echo ''; }} ?>"><a  class="nav-link" href="<?php echo web_root; ?>index.php?q=hiring">Latest Jobs</a></li>
+            <li class="nav-item <?php  if(isset($_GET['q'])) { if($_GET['q']=='hiring'){ echo 'active'; }else{ echo ''; }} ?>"><a  class="nav-link" href="<?php echo web_root; ?>index.php?q=hiring">Jobs </a></li>
             <li class="nav-item <?php  if(isset($_GET['q'])) { if($_GET['q']=='About'){ echo 'active'; }else{ echo ''; }}  ?>"><a  class="nav-link" href="<?php echo web_root; ?>index.php?q=About">About Us</a></li>
            <!-- <li class="nav-item <?php  if(isset($_GET['q'])) { if($_GET['q']=='Contact'){ echo 'active'; }else{ echo ''; }}  ?>"><a  class="nav-link" href="<?php echo web_root; ?>index.php?q=Contact">Contact</a></li> -->
             <?php if (!isset($_SESSION['APPLICANTID'])) { ?>
@@ -156,7 +156,7 @@
 				  
 				  
 				  
-	                <li><span class="icon icon-map-marker"></span><span class="text">P.O. Box 34600 Masaka-Kampala road, Uganda</span></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">P.O. Box 34600 Viena Motel,Masaka-Uganda</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+256-701-077701</span></a></li>
 					<li><a href="#"><span class="icon icon-book"></span><span class="text">E1908681(Licence No)</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">uniquerecruitersuganda@gmail.com</span></a></li>
@@ -224,13 +224,13 @@
           $('#loginerrormessage').fadeOut(); 
                 $('#loginerrormessage').fadeIn();  
                 $('#loginerrormessage').css({ 
-                        "background" :"red",
+                        "background" :"#3cb371",
                         "color"      : "#fff",
                         "padding"    : "5px;"
                     }); 
-          $("#loginerrormessage").html("Invalid Username and Password!");
+          $("#loginerrormessage").html("Missing Fields !!!");
           //  $("#loginerrormessage").css(function(){ 
-          //   "background-color" : "red";
+          //   "background-color" : "#3cb371";
           // });
         }else{
 
@@ -244,7 +244,7 @@
                 $('#loginerrormessage').fadeOut(); 
                 $('#loginerrormessage').fadeIn();  
                 $('#loginerrormessage').css({ 
-                        "background" :"red",
+                        "background" :"#3cb371",
                         "color"      : "#fff",
                         "padding"    : "5px;"
                     }); 

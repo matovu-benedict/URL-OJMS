@@ -14,12 +14,12 @@
  <?php
 if (isset($_GET['search'])) {
 # code...
-$jobid = $_GET['search'];
+$JOBID = $_GET['search'];
 }else{
-$jobid = '';
+$JOBID = '';
 
 }
-$sql = "SELECT * FROM `tblcompany` c,`tbljob` j WHERE c.`COMPANYID`=j.`COMPANYID` AND JOBID LIKE '%" . $jobid ."%' ORDER BY DATEPOSTED DESC" ;
+$sql = "SELECT * FROM `tblcompany` c,`tbljob` j WHERE c.`COMPANYID`=j.`COMPANYID` AND JOBID LIKE '%" . $JOBID ."%' ORDER BY DATEPOSTED DESC";
 $mydb->setQuery($sql);
 $result = $mydb->loadSingleResult();
 

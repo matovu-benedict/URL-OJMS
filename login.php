@@ -4,19 +4,17 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-
-                      
-                  
-
 				   
-                        <button class="close" data-dismiss="modal" type=
-                  "button">×</button>
- 
+                        <button class="close" data-dismiss="modal" type="button">×</button>
                 </div>
 
                 <!-- <form action="process.php?action=login" enctype="multipart/form-data" method="post"> -->
                   <div class="modal-body hold-transition login-page">
-                    <div id="loginerrormessage" style="background: green; color: white;"></div>
+				  
+				  <div id="loginerrormessage"></div>
+				 
+                    
+					<!--<div id="loginerrormessage" style="background: green; color: white;"></div> -->
                     <div class="login-box"> 
                         <div class="login-box-body" style="border: solid 2px #ddd;padding: 35px;min-height: 350px;"> 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2021 at 12:37 PM
+-- Generation Time: Aug 22, 2021 at 05:01 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -160,7 +160,8 @@ INSERT INTO `tblcompany` (`COMPANYID`, `COMPANYNAME`, `COMPANYADDRESS`, `COMPANY
 (20, 'House-Maids-UAE', 'Doha, Qatar', '+256-701-077701'),
 (21, 'Al Taef Star Transport', 'Dubai', '+256-701-077701'),
 (22, 'Murray & Roberts Contractors Middle East LLC', 'Dubai - United Arab Emirates', '+256-701-077701'),
-(23, 'MPC Healthcare', 'Healthcare City - Dubai - United Arab Emirates', '+256-701-077701');
+(23, 'MPC Healthcare', 'Healthcare City - Dubai - United Arab Emirates', '+256-701-077701'),
+(24, 'AL- SHAOLAH-MAIDS - SMC LIMITED', 'Doha-Qatar', '+256-701-077701');
 
 -- --------------------------------------------------------
 
@@ -238,7 +239,8 @@ CREATE TABLE `tbljob` (
 
 INSERT INTO `tbljob` (`JOBID`, `COMPANYID`, `CATEGORY`, `OCCUPATIONTITLE`, `REQ_NO_EMPLOYEES`, `SALARIES`, `DURATION_EMPLOYEMENT`, `QUALIFICATION_WORKEXPERIENCE`, `JOBDESCRIPTION`, `PREFEREDSEX`, `DEADLINE`, `DATEPOSTED`) VALUES
 (13, 19, 'Security', 'Security Guard', 200, '1.5 Million Ug shs', 'from 8am to 5pm', 'O-level  certificate ', 'Inspect and patrol premises regularly\r\nMonitor property entrance\r\nAuthorize entrance of people and vehicles\r\nReport any suspicious behaviors and happenings\r\nSecure all exits, doors and windows\r\nMonitor surveillance cameras\r\nRespond to alarms and react in a timely manner\r\nProvide assistance to people in need\r\nSubmit reports of daily surveillance activity\r\nSubmit reports of every suspicious action\r\n', 'Male/Female', '2021-09-15', '2021-08-01 00:00:00'),
-(14, 17, 'Construction', 'Road Workers', 5000, '300,000 to 1,000,000', '7am to 6pm', 'PLE certificate', 'installing the cones, signs and barricades that warn drivers and control the flow of traffic, acting as flagmen to stop or direct traffic, clearing debris from the work site, using jackhammers to break up existing pavement and tending equipment such as cement mixers or asphalt heaters.', 'Male/Female', '2021-08-31', '2021-08-01 00:00:00');
+(14, 17, 'Construction', 'Road Workers', 5000, '300,000 to 1,000,000', '7am to 6pm', 'PLE certificate', 'installing the cones, signs and barricades that warn drivers and control the flow of traffic, acting as flagmen to stop or direct traffic, clearing debris from the work site, using jackhammers to break up existing pavement and tending equipment such as cement mixers or asphalt heaters.', 'Male/Female', '2021-08-31', '2021-08-01 00:00:00'),
+(15, 24, 'Maids', 'House Maid', 400, '1.5Million-1.8Million', 'Full-time', 'O-level certificate ', 'Domestic workers who will be doing tasks like laundry, ironing clothes, taking care of children etc.\r\nNote:You must be at least good at English speaking', 'Female', '2021-09-15', '2021-08-10 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -265,7 +267,36 @@ CREATE TABLE `tbljobregistration` (
 --
 
 INSERT INTO `tbljobregistration` (`REGISTRATIONID`, `COMPANYID`, `JOBID`, `APPLICANTID`, `APPLICANT`, `REGISTRATIONDATE`, `REMARKS`, `FILEID`, `PENDINGAPPLICATION`, `HVIEW`, `DATETIMEAPPROVED`) VALUES
-(18, 19, 13, 2021032, 'Matovu Benedict', '2021-08-01', 'You have been selected,attend interview on 7th-Aug-2021 at 8am via zoom Meeting ID:9178765432, Passcode:url2021', 2021000014, 0, 0, '2021-08-01 13:16:56');
+(18, 19, 13, 2021032, 'Matovu Benedict', '2021-08-01', 'you have been selected for the job,report to the office  as soon as possible', 2021000014, 0, 0, '2021-08-12 08:36:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblselected`
+--
+
+CREATE TABLE `tblselected` (
+  `SELECTIONID` int(11) NOT NULL,
+  `COMPANYNAME` varchar(255) NOT NULL,
+  `CANDIDATENAME` varchar(255) NOT NULL,
+  `AGE` varchar(255) NOT NULL,
+  `GENDER` varchar(255) NOT NULL,
+  `JOBTITLE` varchar(255) NOT NULL,
+  `COUNTRY` varchar(255) NOT NULL,
+  `CONTRACT` varchar(255) NOT NULL,
+  `SALARY` varchar(255) NOT NULL,
+  `CONTACT` varchar(255) DEFAULT NULL,
+  `CONTRACTBEGIN` date DEFAULT NULL,
+  `CONTRACTEND` date NOT NULL,
+  `CreatedAt` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblselected`
+--
+
+INSERT INTO `tblselected` (`SELECTIONID`, `COMPANYNAME`, `CANDIDATENAME`, `AGE`, `GENDER`, `JOBTITLE`, `COUNTRY`, `CONTRACT`, `SALARY`, `CONTACT`, `CONTRACTBEGIN`, `CONTRACTEND`, `CreatedAt`) VALUES
+(7, 'AL- SHAOLAH-MAIDS - SMC LIMITED', 'MATOVU', 'BENEDICT', 'Male', 'SECURITY GUARD', 'QATAR', '2 YEARS', '1800000', '0757285746', '2021-11-24', '2023-11-24', '2021-08-19 13:08:04.389099');
 
 -- --------------------------------------------------------
 
@@ -350,6 +381,12 @@ ALTER TABLE `tbljobregistration`
   ADD PRIMARY KEY (`REGISTRATIONID`);
 
 --
+-- Indexes for table `tblselected`
+--
+ALTER TABLE `tblselected`
+  ADD PRIMARY KEY (`SELECTIONID`);
+
+--
 -- Indexes for table `tblusers`
 --
 ALTER TABLE `tblusers`
@@ -383,7 +420,7 @@ ALTER TABLE `tblcategory`
 -- AUTO_INCREMENT for table `tblcompany`
 --
 ALTER TABLE `tblcompany`
-  MODIFY `COMPANYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `COMPANYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `tblemployer`
 --
@@ -398,12 +435,17 @@ ALTER TABLE `tblfeedback`
 -- AUTO_INCREMENT for table `tbljob`
 --
 ALTER TABLE `tbljob`
-  MODIFY `JOBID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `JOBID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `tbljobregistration`
 --
 ALTER TABLE `tbljobregistration`
   MODIFY `REGISTRATIONID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+--
+-- AUTO_INCREMENT for table `tblselected`
+--
+ALTER TABLE `tblselected`
+  MODIFY `SELECTIONID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -120,7 +120,7 @@ function doInsert($jobid=0,$fileid=0) {
 	    $autonum->auto_update('FILEID'); 
   
 
-			message("Your application already submitted. Please wait for the company confirmation if your are qualified to this job.","success");
+			message("Your application have been submitted. Please login into your account after 24hrs to find if you have been selected.","success");
 			redirect("index.php?q=success&job=".$result->JOBID);
 
 			
@@ -156,7 +156,7 @@ function doUpdate($jobid=0,$fileid=0) {
 	   		$autonum->auto_update('FILEID'); 
 
   
-			message("Your application already submitted. Please wait for the company confirmation if your are qualified to this job.","success");
+			message("Your application have been submitted. Please login into your account after 24hrs to find if you have been selected.","success");
 			redirect("index.php?q=success&job=".$result->JOBID);
  
 	}
@@ -201,7 +201,7 @@ function doRegister(){
 			$autonum->auto_update('APPLICANT');
 
 
-			message("You are successfully registered to the site. You can login now!","success");
+			message("You are successfully registered to the site. You can login now","success");
 			redirect("index.php?q=success");
 
 			
@@ -221,7 +221,7 @@ function doLogin(){
     $res = $applicant->applicantAuthentication($email, $h_upass);
     if ($res==true) { 
 
-       	message("You have successfully logged in!","success");
+       	message("You have successfully logged in","success");
        
        // $sql="INSERT INTO `tbllogs` (`USERID`,USERNAME, `LOGDATETIME`, `LOGROLE`, `LOGMODE`) 
        //    VALUES (".$_SESSION['USERID'].",'".$_SESSION['FULLNAME']."','".date('Y-m-d H:i:s')."','".$_SESSION['UROLE']."','Logged in')";
@@ -229,7 +229,7 @@ function doLogin(){
          redirect(web_root."applicant/");
      
     }else{
-    	 echo "Invalid Username Or Password!!"; 
+    	 echo "Invalid Username Or Password !!!"; 
     } 
 }
  

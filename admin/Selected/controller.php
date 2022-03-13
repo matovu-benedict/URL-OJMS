@@ -35,19 +35,20 @@ switch ($action) {
 		}else{	
 			$job = New Jobs();
 			$job->COMPANYID							= $_POST['COMPANYID']; 
-			$job->CATEGORY							= $_POST['CATEGORY']; 
-			$job->OCCUPATIONTITLE					= $_POST['OCCUPATIONTITLE'];
-			$job->REQ_NO_EMPLOYEES					= $_POST['REQ_NO_EMPLOYEES'];
-			$job->SALARIES							= $_POST['SALARIES'];
-			$job->DURATION_EMPLOYEMENT				= $_POST['DURATION_EMPLOYEMENT'];
-			$job->QUALIFICATION_WORKEXPERIENCE		= $_POST['QUALIFICATION_WORKEXPERIENCE'];
-			$job->JOBDESCRIPTION					= $_POST['JOBDESCRIPTION'];
-			$job->PREFEREDSEX						= $_POST['PREFEREDSEX'];
-			$job->DEADLINE						    = $_POST['DEADLINE'];
+			$job->CANDIDATENAME						= $_POST['CANDIDATENAME']; 
+			$job->AGE					            = $_POST['AGE'];
+			$job->GENDER					        = $_POST['GENDER'];
+			$job->JOBTITLE							= $_POST['JOBTITLE'];
+			$job->COUNTRY			                = $_POST['COUNTRY'];
+			$job->CONTRACT		                    = $_POST['CONTRACT'];
+			$job->SALARY				           	= $_POST['SALARY'];
+			$job->CONTACT						    = $_POST['CONTACT'];
+			$job->CONTRACTBEGIN						= $_POST['CONTRACTBEGIN'];
+			$job->CONTRACTEND					    = $_POST['CONTRACTEND'];
 			$job->DATEPOSTED						= date('Y-m-d');
 			$job->create();
 
-			message("New Job Vacancy created successfully!", "success");
+			message("New Candidate created successfully!", "success");
 			redirect("index.php");
 			
 		}

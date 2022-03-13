@@ -64,34 +64,34 @@ global $mydb;
 }
 </style>
 <form action="controller.php?action=approve" method="POST">
-<div class="col-sm-12 content-header" style="">View Details</div>
+<div class="col-sm-12 content-header" style="">View Job Details</div>
 <div class="col-sm-12 content-body" >  
-	<h3><?php echo $job->OCCUPATIONTITLE; ?></h3>
+	<strong><h3><?php echo $job->OCCUPATIONTITLE; ?></h3></strong>
 	<input type="hidden" name="JOBREGID" value="<?php echo $jobreg->REGISTRATIONID;?>">
 
 	<div class="col-sm-6">
 		<ul>
-            <li><i class="fp-ht-bed"></i>Required No. of Employee's : <?php echo $job->REQ_NO_EMPLOYEES; ?></li>
-            <li><i class="fp-ht-food"></i>Salary : <?php echo $job->SALARIES;  ?></li>
-            <li><i class="fa fa-sun-"></i>Working Hours : <?php echo $job->DURATION_EMPLOYEMENT; ?></li>
+           <strong> <li><i class="fp-ht-bed"></i>Required No. of Employee's :</strong> <?php echo $job->REQ_NO_EMPLOYEES; ?></li>
+           <strong> <li><i class="fp-ht-food"></i>Salary :</strong> <?php echo $job->SALARIES;  ?></li>
+           <strong> <li><i class="fa fa-sun-"></i>Working Hours :</strong> <?php echo $job->DURATION_EMPLOYEMENT; ?></li>
         </ul>
 	</div> 
 	<div class="col-sm-6">
 		<ul> 
-            <li><i class="fp-ht-tv"></i>Prefered Sex : <?php echo $job->PREFEREDSEX; ?></li>
-            <li><i class="fp-ht-computer"></i>Deadline for application : <?php echo $job->DEADLINE; ?></li>
+            <strong><li><i class="fp-ht-tv"></i>Prefered Sex :</strong> <?php echo $job->PREFEREDSEX; ?></li>
+            <strong><li><i class="fp-ht-computer"></i>Deadline for application :</strong> <?php echo $job->DEADLINE; ?></li>
         </ul>
 	</div>
 	<div class="col-sm-12">
-		<p>Job Description : </p>   
+		<strong><p>Job Description : </p>  </strong> 
 		<p style="margin-left: 15px;"><?php echo $job->JOBDESCRIPTION;?></p>
 	</div>
 	<div class="col-sm-12"> 
-		<p>Level of Education : </p>
+		<strong><p>Level of Education : </p></strong>
 		<p style="margin-left: 15px;"><?php echo $job->QUALIFICATION_WORKEXPERIENCE; ?></p>
 	</div>
 	<div class="col-sm-12"> 
-		<p>Employeer : </p>
+		<strong><p>Employeer : </p></strong>
 		<p style="margin-left: 15px;"><?php echo $comp->COMPANYNAME ; ?></p> 
 		<p style="margin-left: 15px;">@ <?php echo $comp->COMPANYADDRESS ; ?></p>
 	</div>
@@ -100,10 +100,10 @@ global $mydb;
 <div class="col-sm-12 content-footer">
 <p><i class="fa fa-paperclip"></i>  Attachment Files</p>
 	<div class="col-sm-12 slider">
-		 <h3>Download Resume <a href="<?php echo web_root.'applicant/'.$attachmentfile->FILE_LOCATION; ?>">Here</a></h3>
+		 <h3>Download Resume <a href="<?php echo web_root.'applicant/'.$attachmentfile->FILE_LOCATION; ?>">From Here</a></h3>
 	</div>  
 	<div class="col-sm-12">
-		<p>Feedback</p>
+		<strong><p>Feedback</p></strong>
 		<p><?php echo isset($jobreg->REMARKS) ? $jobreg->REMARKS : ""; ?></p>
 	</div>
 	<div class="col-sm-12  submitbutton "> 

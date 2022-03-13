@@ -43,7 +43,7 @@ require_once("../include/initialize.php");
     <h1 class="login-box-msg">Unique Recruiters Limited</h1>
     
 	
-<center><img class="lo"style="width:40%; height:40%; "src="recruite.jpg" alt="logo"></center>
+<center><img class="lo" style="width:40%; height:40%; "src="recruite.jpg" alt="logo"></center>
     
 	  
 	<p><?php check_message(); ?></p>
@@ -68,6 +68,14 @@ require_once("../include/initialize.php");
         <!-- /.col -->
         <div class="col-xs-4">
           <center><button type="submit" name="btnLogin" class="btn  btn-primary btn-block">Log in</button></center>
+        </div>
+		
+		 <div class="col-xs-4">
+         
+        </div>
+		
+		<div class="col-xs-4">
+          <center<button class="btn  btn-primary btn-block" onclick="window.location.href='/URL-OJMS'">Back</button></center>
         </div>
       </div>
         <!-- /.col -->
@@ -99,7 +107,7 @@ if(isset($_POST['btnLogin'])){
   
    if ($email == '' OR $upass == '') {
 
-      message("Invalid Username and Password!", "error");
+      message("Please Enter A valid Username or Password !!!", "error");
       redirect("login.php");
          
     } else {  
@@ -127,7 +135,7 @@ if(isset($_POST['btnLogin'])){
          redirect(web_root."admin/index.php");
       // } 
     }else{
-      message("Invalid Username or Password!!!.", "error");
+      message("Please Enter a valid Username or Password !!!", "error");
        redirect(web_root."admin/login.php"); 
     }
  }

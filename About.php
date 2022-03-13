@@ -21,7 +21,7 @@
 		            <strong></h2> Our Mission</h2></strong>
         </div>
 			</hr>
-  				<p>This Online Jobs Management System  connects qualified professionals like you to their dream jobs and employers to the best talent to help grow their businesses.</p>
+  				<p>To connect qualified professionals like you to their dream jobs and employers to the best talent to help grow their businesses.</p>
   			</div>
     	</div>
     </section>

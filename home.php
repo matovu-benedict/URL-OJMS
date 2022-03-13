@@ -5,7 +5,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
 
-            <h1 class="mb-5" data-scrollax="properties: { translateY: '20%', opacity: 1.0 }"><br><span>Solving unemployment by Creating a global village for communication between job seekrs and employers.</span></h1>
+            <h1 class="mb-5" data-scrollax="properties: { translateY: '20%', opacity: 1.0 }"><br><span>Solving unemployment by Creating a global village for linking job seekrs and employers.</span></h1>
 
             <div class="ftco-search">
               <div class="row">

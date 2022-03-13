@@ -86,7 +86,7 @@
 		
 		 
 		
-	      <a class="navbar-brand" href="<?php echo web_root.'applicant/'; ?>">URL-Online Jobs Management System</a>
+	      <a class="navbar-brand" href="<?php echo web_root.'applicant/'; ?>">OJMS-Unique Recruiters Limited</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -125,7 +125,7 @@
 
 	<footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
-        <  <div class="row mb-5">
+         <div class="row mb-5">
         	<div class="col-md">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About</h2>
@@ -154,7 +154,7 @@
 				  
 				  
 				  
-	                <li><span class="icon icon-map-marker"></span><span class="text">P.O. Box 34600 Masaka-Kampala road, Uganda</span></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">P.O. Box 34600 Viena Motel,Masaka-Uganda</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+256-701-077701</span></a></li>
 					<li><a href="#"><span class="icon icon-book"></span><span class="text">E1908681(Licence No)</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">uniquerecruitersuganda@gmail.com</span></a></li>
